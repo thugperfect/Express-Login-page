@@ -12,12 +12,16 @@ const fetchData =()=>{
         let flag = false
       
         usersData.map((prop)=>{
-      
-          if(prop.uname === uname.value && prop.passwd === uname.passwd)  {
-           console.log(true);
+     
+          if(prop.uname === uname.value && prop.passwd === passwd.value)  {
+            flag = true
+         alert("Logged in")
           }
           
         })
+        if(!flag ){
+          alert("check uname or passwd")
+        }
     })
    
 }
